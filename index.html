@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <form id="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="search" name="city-name" id="city-name" placeholder="search for...">
+
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass">.</i>
+            </button>
+        </form>
+
+        <!--Tirar a classe: ' class="show" ' 
+        do weather, pq vai add=> com o js-->
+        <div id="weather">
+            <h1 id="title"></h1>
+
+            <div id="infos">
+                <div id="temperature">
+                    <img  id="img-prediction" src="" alt="">
+
+                    <div>
+                        <p id="prediction-value">
+                            
+                           <!-- <sup>C°</sup> -->
+                            <!--Tag: <sup> -> 'll make the 'C°' be placed above the N°-->
+                        </p>
+                        <p id="weather-description">
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div id="complementary">
+                    <div class="info">
+                        <i id="temp-max-icon" class="fa-solid fa-temperature-arrow-up"></i>
+
+                        <div>
+                            <h2>Max Temperature:</h2>
+
+                            <p id="max-temp">
+                                
+                                <!-- <sup>C°</sup> -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="temp-min-icon" class="fa-solid fa-temperature-arrow-down"></i>
+
+                        <div>
+                            <h2>Lowest Temperature:</h2>
+
+                            <p id="min-temp">
+
+                                <!-- <sup>C°</sup> -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="humidity-icon" class="fa-solid fa-droplet"></i>
+
+                        <div>
+                            <h2>Humidity:</h2>
+
+                            <p id="humidity">
+
+                                <!-- <small>%</small> -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="wind-icon" class="fa-solid fa-wind"></i>
+
+                        <div>
+                            <h2>Wind:</h2>
+
+                            <p id="wind">
+
+                                <!-- <small>Km/h</small> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="alert"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
